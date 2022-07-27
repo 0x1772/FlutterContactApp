@@ -177,14 +177,6 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                 ),
-                widget _typer({
-                  return SizedBox(
-                    width: 250.0,
-                    child: DefaultTextStyle(style: const TextStyle(fontSize: 16.0,
-                    fontFamily: 'Monoton'
-                    color: Colors.white,),child: AnimatedTextKit(isRepeatingAnimation: true,animatedTexts: [TyperAnimatedText(Loading...)],),),
-                  ),
-                }
                   child: Container(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
