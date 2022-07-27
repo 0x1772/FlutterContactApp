@@ -141,10 +141,21 @@ class MyApp extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Icon(
-                        FontAwesome5.telegram_plane,
-                        color: Colors.white,
+                    children: <Widget>[
+                      ShaderMask(
+                        blendMode: BlendMode.srcATop,
+                        shaderCallback: (bounds) => LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            Color.fromARGB(255, 25, 0, 255),
+                            Color.fromARGB(255, 49, 147, 228)
+                          ],
+                        ).createShader(bounds),
+                        child: Icon(
+                          FontAwesome5.telegram_plane,
+                          color: Colors.white,
+                        ),
                       ),
                       SizedBox(
                         height: 70.0,
