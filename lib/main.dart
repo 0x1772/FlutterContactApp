@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fluttericon/entypo_icons.dart';
-import 'package:fluttericon/mfg_labs_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:fluttericon/font_awesome_icons.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 void main() {
   runApp(
@@ -205,6 +205,21 @@ class MyApp extends StatelessWidget {
                         style: GoogleFonts.audiowide(
                             fontSize: 16, color: Colors.white),
                       ),
+                    ],
+                  ),
+                ),
+                Container _typer(
+                  child: AnimatedTextKit(
+                    isRepeatingAnimation: true,
+                    animatedTexts: [
+                      TyperAnimatedText('Loading...',
+                          speed: Duration(milliseconds: 100)),
+                      TyperAnimatedText('something you know.But if you listen,',
+                          speed: Duration(milliseconds: 100)),
+                      TyperAnimatedText(' you may learn something new.',
+                          speed: Duration(milliseconds: 100)),
+                      TyperAnimatedText('– Dalai Lama',
+                          speed: Duration(milliseconds: 100)),
                     ],
                   ),
                 ),
