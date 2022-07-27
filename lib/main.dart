@@ -27,9 +27,15 @@ class MyApp extends StatelessWidget {
                   backgroundImage: AssetImage('images/me.png'),
                   radius: 70.0,
                 ),
+                SizedBox(
+                  height: 10.0,
+                ),
                 Text(
-                  'CONTACT',
+                  'Accounts',
                   style: TextStyle(fontSize: 30, color: Colors.white),
+                ),
+                SizedBox(
+                  height: 20.0,
                 ),
                 Text(
                   '',
