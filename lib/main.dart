@@ -169,6 +169,14 @@ class MyApp extends StatelessWidget {
                         FontAwesome5.linkedin,
                         color: Colors.white,
                       ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
+                      Text(
+                        'Loading...',
+                        style: GoogleFonts.audiowide(
+                            fontSize: 16, color: Colors.white),
+                      ),
                     ],
                   ),
                 ),
