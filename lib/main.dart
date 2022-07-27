@@ -160,6 +160,18 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                 ),
+                Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        FontAwesome5.linkedin,
+                        color: Colors.white,
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
