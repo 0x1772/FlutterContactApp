@@ -177,36 +177,35 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                 ),
-                  child: Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        ShaderMask(
-                          blendMode: BlendMode.srcATop,
-                          shaderCallback: (bounds) => LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: [
-                              Color.fromARGB(255, 17, 221, 160),
-                              Color.fromARGB(255, 67, 161, 238)
-                            ],
-                          ).createShader(bounds),
-                          child: Icon(
-                            FontAwesome5.linkedin,
-                            color: Colors.white,
-                          ),
+                Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      ShaderMask(
+                        blendMode: BlendMode.srcATop,
+                        shaderCallback: (bounds) => LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            Color.fromARGB(255, 17, 221, 160),
+                            Color.fromARGB(255, 67, 161, 238)
+                          ],
+                        ).createShader(bounds),
+                        child: Icon(
+                          FontAwesome5.linkedin,
+                          color: Colors.white,
                         ),
-                        SizedBox(
-                          width: 10.0,
-                        ),
-                        Text(
-                          'Loading...',
-                          style: GoogleFonts.audiowide(
-                              fontSize: 16, color: Colors.white),
-                        ),
-                      ],
-                    ),
+                      ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
+                      Text(
+                        'Loading...',
+                        style: GoogleFonts.audiowide(
+                            fontSize: 16, color: Colors.white),
+                      ),
+                    ],
                   ),
                 ),
               ],
