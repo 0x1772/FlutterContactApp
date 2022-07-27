@@ -176,9 +176,20 @@ class MyApp extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      Icon(
-                        FontAwesome5.linkedin,
-                        color: Colors.white,
+                      ShaderMask(
+                        blendMode: BlendMode.srcATop,
+                        shaderCallback: (bounds) => LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            Color.fromARGB(255, 17, 221, 160),
+                            Color.fromARGB(255, 67, 161, 238)
+                          ],
+                        ).createShader(bounds),
+                        child: Icon(
+                          FontAwesome5.linkedin,
+                          color: Colors.white,
+                        ),
                       ),
                       SizedBox(
                         width: 10.0,
