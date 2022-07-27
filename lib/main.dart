@@ -177,50 +177,44 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      ShaderMask(
-                        blendMode: BlendMode.srcATop,
-                        shaderCallback: (bounds) => LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: [
-                            Color.fromARGB(255, 17, 221, 160),
-                            Color.fromARGB(255, 67, 161, 238)
-                          ],
-                        ).createShader(bounds),
-                        child: Icon(
-                          FontAwesome5.linkedin,
-                          color: Colors.white,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        'Loading...',
-                        style: GoogleFonts.audiowide(
-                            fontSize: 16, color: Colors.white),
-                      ),
-                    ],
+                widget _typer({
+                  return SizedBox(
+                    width: 250.0,
+                    child: DefaultTextStyle(style: const TextStyle(fontSize: 16.0,
+                    fontFamily: 'Monoton'
+                    color: Colors.white,),child: AnimatedTextKit(isRepeatingAnimation: true,animatedTexts: [TyperAnimatedText(Loading...)],),),
                   ),
-                ),
-                Container _typer(
-                  child: AnimatedTextKit(
-                    isRepeatingAnimation: true,
-                    animatedTexts: [
-                      TyperAnimatedText('Loading...',
-                          speed: Duration(milliseconds: 100)),
-                      TyperAnimatedText('something you know.But if you listen,',
-                          speed: Duration(milliseconds: 100)),
-                      TyperAnimatedText(' you may learn something new.',
-                          speed: Duration(milliseconds: 100)),
-                      TyperAnimatedText('– Dalai Lama',
-                          speed: Duration(milliseconds: 100)),
-                    ],
+                }
+                  child: Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        ShaderMask(
+                          blendMode: BlendMode.srcATop,
+                          shaderCallback: (bounds) => LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Color.fromARGB(255, 17, 221, 160),
+                              Color.fromARGB(255, 67, 161, 238)
+                            ],
+                          ).createShader(bounds),
+                          child: Icon(
+                            FontAwesome5.linkedin,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        Text(
+                          'Loading...',
+                          style: GoogleFonts.audiowide(
+                              fontSize: 16, color: Colors.white),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
